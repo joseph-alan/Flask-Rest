@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Database {% endblock %}
+{% block content %}
+    <table style="border: 1px solid black;">
+        <tr style="border: 1px solid black;">
+          <th width="100" style="border: 1px solid black;">Name</th>
+          <th width="100" style="border: 1px solid black;">Password</th>
+          <th width="300" style="border: 1px solid black;">Email</th>
+        </tr>
+        {% for item in values %}
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">{{item.name}}</td>
+            <td style="border: 1px solid black;">{{item.password}}</td>
+            <td style="border: 1px solid black;">{{item.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
